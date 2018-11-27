@@ -21,20 +21,16 @@
 #define IDLE_THREAD_STACK_SIZE 256
 /* RT_USING_TIMER_SOFT is not set */
 #define RT_DEBUG
-#define RT_DEBUG_INIT_CONFIG
-#define RT_DEBUG_INIT 1
-#define RT_DEBUG_THREAD_CONFIG
-#define RT_DEBUG_THREAD 1
-#define RT_DEBUG_SCHEDULER_CONFIG
-#define RT_DEBUG_SCHEDULER 1
+/* RT_DEBUG_INIT_CONFIG is not set */
+/* RT_DEBUG_THREAD_CONFIG is not set */
+/* RT_DEBUG_SCHEDULER_CONFIG is not set */
 /* RT_DEBUG_IPC_CONFIG is not set */
 /* RT_DEBUG_TIMER_CONFIG is not set */
 /* RT_DEBUG_IRQ_CONFIG is not set */
 /* RT_DEBUG_MEM_CONFIG is not set */
 /* RT_DEBUG_SLAB_CONFIG is not set */
 /* RT_DEBUG_MEMHEAP_CONFIG is not set */
-#define RT_DEBUG_MODULE_CONFIG
-#define RT_DEBUG_MODULE 1
+/* RT_DEBUG_MODULE_CONFIG is not set */
 
 /* Inter-Thread communication */
 

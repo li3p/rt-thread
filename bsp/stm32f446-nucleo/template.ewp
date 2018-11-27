@@ -12,25 +12,20 @@
       <name>General</name>
       <archiveVersion>3</archiveVersion>
       <data>
-        <version>21</version>
+        <version>24</version>
         <wantNonLocal>1</wantNonLocal>
         <debug>1</debug>
         <option>
           <name>ExePath</name>
-          <state>Debug\Exe</state>
+          <state>build\Exe</state>
         </option>
         <option>
           <name>ObjPath</name>
-          <state>Debug\Obj</state>
+          <state>build\Obj</state>
         </option>
         <option>
           <name>ListPath</name>
-          <state>Debug\List</state>
-        </option>
-        <option>
-          <name>Variant</name>
-          <version>19</version>
-          <state>37</state>
+          <state>build\List</state>
         </option>
         <option>
           <name>GEndianMode</name>
@@ -59,11 +54,6 @@
           <state>0</state>
         </option>
         <option>
-          <name>FPU</name>
-          <version>2</version>
-          <state>0</state>
-        </option>
-        <option>
           <name>OGCoreOrChip</name>
           <state>1</state>
         </option>
@@ -83,11 +73,11 @@
         </option>
         <option>
           <name>OGProductVersion</name>
-          <state>6.30.6.53380</state>
+          <state>7.20.1.7306</state>
         </option>
         <option>
           <name>OGLastSavedByProductVersion</name>
-          <state>6.30.6.53380</state>
+          <state>7.40.3.8937</state>
         </option>
         <option>
           <name>GeneralEnableMisra</name>
@@ -99,7 +89,7 @@
         </option>
         <option>
           <name>OGChipSelectEditMenu</name>
-          <state>STM32F429IG	ST STM32F429IG</state>
+          <state>STM32F411RE	ST STM32F411RE</state>
         </option>
         <option>
           <name>GenLowLevelInterface</name>
@@ -136,14 +126,9 @@
           <state>$TOOLKIT_DIR$\INC\c\DLib_Config_Normal.h</state>
         </option>
         <option>
-          <name>GFPUCoreSlave</name>
-          <version>19</version>
-          <state>37</state>
-        </option>
-        <option>
           <name>GBECoreSlave</name>
-          <version>19</version>
-          <state>37</state>
+          <version>22</version>
+          <state>39</state>
         </option>
         <option>
           <name>OGUseCmsis</name>
@@ -153,13 +138,45 @@
           <name>OGUseCmsisDspLib</name>
           <state>0</state>
         </option>
+        <option>
+          <name>GRuntimeLibThreads</name>
+          <state>0</state>
+        </option>
+        <option>
+          <name>CoreVariant</name>
+          <version>22</version>
+          <state>39</state>
+        </option>
+        <option>
+          <name>GFPUDeviceSlave</name>
+          <state>STM32F411RE	ST STM32F411RE</state>
+        </option>
+        <option>
+          <name>FPU2</name>
+          <version>0</version>
+          <state>4</state>
+        </option>
+        <option>
+          <name>NrRegs</name>
+          <version>0</version>
+          <state>1</state>
+        </option>
+        <option>
+          <name>NEON</name>
+          <state>0</state>
+        </option>
+        <option>
+          <name>GFPUCoreSlave2</name>
+          <version>22</version>
+          <state>39</state>
+        </option>
       </data>
     </settings>
     <settings>
       <name>ICCARM</name>
       <archiveVersion>2</archiveVersion>
       <data>
-        <version>28</version>
+        <version>31</version>
         <wantNonLocal>1</wantNonLocal>
         <debug>1</debug>
         <option>
@@ -225,7 +242,7 @@
         <option>
           <name>CCAllowList</name>
           <version>1</version>
-          <state>0000000</state>
+          <state>00000000</state>
         </option>
         <option>
           <name>CCDebugInfo</name>
@@ -386,13 +403,30 @@
           <name>IccFloatSemantics</name>
           <state>0</state>
         </option>
+        <option>
+          <name>CCOptimizationNoSizeConstraints</name>
+          <state>0</state>
+        </option>
+        <option>
+          <name>CCNoLiteralPool</name>
+          <state>0</state>
+        </option>
+        <option>
+          <name>CCOptStrategySlave</name>
+          <version>0</version>
+          <state>0</state>
+        </option>
+        <option>
+          <name>CCGuardCalls</name>
+          <state>1</state>
+        </option>
       </data>
     </settings>
     <settings>
       <name>AARM</name>
       <archiveVersion>2</archiveVersion>
       <data>
-        <version>8</version>
+        <version>9</version>
         <wantNonLocal>1</wantNonLocal>
         <debug>1</debug>
         <option>
@@ -518,7 +552,7 @@
         </option>
         <option>
           <name>AOutputFile</name>
-          <state></state>
+          <state>$FILE_BNAME$.o</state>
         </option>
         <option>
           <name>AMultibyteSupport</name>
@@ -548,6 +582,10 @@
           <name>AExtraOptionsV2</name>
           <state></state>
         </option>
+        <option>
+          <name>AsmNoLiteralPool</name>
+          <state>0</state>
+        </option>
       </data>
     </settings>
     <settings>
@@ -559,16 +597,16 @@
         <debug>1</debug>
         <option>
           <name>OOCOutputFormat</name>
-          <version>2</version>
-          <state>0</state>
+          <version>3</version>
+          <state>3</state>
         </option>
         <option>
           <name>OCOutputOverride</name>
-          <state>0</state>
+          <state>1</state>
         </option>
         <option>
           <name>OOCOutputFile</name>
-          <state></state>
+          <state>rtthread.bin</state>
         </option>
         <option>
           <name>OOCCommandLineProducer</name>
@@ -576,7 +614,7 @@
         </option>
         <option>
           <name>OOCObjCopyEnable</name>
-          <state>0</state>
+          <state>1</state>
         </option>
       </data>
     </settings>
@@ -586,6 +624,7 @@
       <data>
         <extensions></extensions>
         <cmdline></cmdline>
+        <hasPrio>0</hasPrio>
       </data>
     </settings>
     <settings>
@@ -605,7 +644,7 @@
       <name>ILINK</name>
       <archiveVersion>0</archiveVersion>
       <data>
-        <version>14</version>
+        <version>16</version>
         <wantNonLocal>1</wantNonLocal>
         <debug>1</debug>
         <option>
@@ -622,7 +661,7 @@
         </option>
         <option>
           <name>IlinkOutputFile</name>
-          <state>project.out</state>
+          <state>rtthread.out</state>
         </option>
         <option>
           <name>IlinkDebugInfoEnable</name>
@@ -686,7 +725,7 @@
         </option>
         <option>
           <name>IlinkIcfFile</name>
-          <state>$PROJ_DIR$\stm32f429_flash.icf</state>
+          <state>$PROJ_DIR$\stm32_rom.icf</state>
         </option>
         <option>
           <name>IlinkIcfFileSlave</name>
@@ -771,10 +810,6 @@
         </option>
         <option>
           <name>CrcAlign</name>
-          <state>1</state>
-        </option>
-        <option>
-          <name>CrcAlgo</name>
           <state>1</state>
         </option>
         <option>
@@ -879,6 +914,20 @@
           <name>IlinkStackCallGraphFile</name>
           <state></state>
         </option>
+        <option>
+          <name>CrcAlgorithm</name>
+          <version>0</version>
+          <state>1</state>
+        </option>
+        <option>
+          <name>CrcUnitSize</name>
+          <version>0</version>
+          <state>0</state>
+        </option>
+        <option>
+          <name>IlinkThreadsSlave</name>
+          <state>1</state>
+        </option>
       </data>
     </settings>
     <settings>
@@ -918,7 +967,7 @@
       <name>General</name>
       <archiveVersion>3</archiveVersion>
       <data>
-        <version>21</version>
+        <version>24</version>
         <wantNonLocal>1</wantNonLocal>
         <debug>0</debug>
         <option>
@@ -932,11 +981,6 @@
         <option>
           <name>ListPath</name>
           <state>Release\List</state>
-        </option>
-        <option>
-          <name>Variant</name>
-          <version>19</version>
-          <state>0</state>
         </option>
         <option>
           <name>GEndianMode</name>
@@ -965,11 +1009,6 @@
           <state>0</state>
         </option>
         <option>
-          <name>FPU</name>
-          <version>2</version>
-          <state>0</state>
-        </option>
-        <option>
           <name>OGCoreOrChip</name>
           <state>0</state>
         </option>
@@ -989,11 +1028,11 @@
         </option>
         <option>
           <name>OGProductVersion</name>
-          <state>6.30.6.53380</state>
+          <state>7.20.1.7306</state>
         </option>
         <option>
           <name>OGLastSavedByProductVersion</name>
-          <state></state>
+          <state>7.40.3.8937</state>
         </option>
         <option>
           <name>GeneralEnableMisra</name>
@@ -1005,7 +1044,7 @@
         </option>
         <option>
           <name>OGChipSelectEditMenu</name>
-          <state></state>
+          <state>Default	None</state>
         </option>
         <option>
           <name>GenLowLevelInterface</name>
@@ -1042,13 +1081,8 @@
           <state></state>
         </option>
         <option>
-          <name>GFPUCoreSlave</name>
-          <version>19</version>
-          <state>1</state>
-        </option>
-        <option>
           <name>GBECoreSlave</name>
-          <version>19</version>
+          <version>22</version>
           <state>1</state>
         </option>
         <option>
@@ -1059,13 +1093,45 @@
           <name>OGUseCmsisDspLib</name>
           <state>0</state>
         </option>
+        <option>
+          <name>GRuntimeLibThreads</name>
+          <state>0</state>
+        </option>
+        <option>
+          <name>CoreVariant</name>
+          <version>22</version>
+          <state>0</state>
+        </option>
+        <option>
+          <name>GFPUDeviceSlave</name>
+          <state>Default	None</state>
+        </option>
+        <option>
+          <name>FPU2</name>
+          <version>0</version>
+          <state>0</state>
+        </option>
+        <option>
+          <name>NrRegs</name>
+          <version>0</version>
+          <state>0</state>
+        </option>
+        <option>
+          <name>NEON</name>
+          <state>0</state>
+        </option>
+        <option>
+          <name>GFPUCoreSlave2</name>
+          <version>22</version>
+          <state>0</state>
+        </option>
       </data>
     </settings>
     <settings>
       <name>ICCARM</name>
       <archiveVersion>2</archiveVersion>
       <data>
-        <version>28</version>
+        <version>31</version>
         <wantNonLocal>1</wantNonLocal>
         <debug>0</debug>
         <option>
@@ -1131,7 +1197,7 @@
         <option>
           <name>CCAllowList</name>
           <version>1</version>
-          <state>1111111</state>
+          <state>11111110</state>
         </option>
         <option>
           <name>CCDebugInfo</name>
@@ -1292,13 +1358,30 @@
           <name>IccFloatSemantics</name>
           <state>0</state>
         </option>
+        <option>
+          <name>CCOptimizationNoSizeConstraints</name>
+          <state>0</state>
+        </option>
+        <option>
+          <name>CCNoLiteralPool</name>
+          <state>0</state>
+        </option>
+        <option>
+          <name>CCOptStrategySlave</name>
+          <version>0</version>
+          <state>0</state>
+        </option>
+        <option>
+          <name>CCGuardCalls</name>
+          <state>1</state>
+        </option>
       </data>
     </settings>
     <settings>
       <name>AARM</name>
       <archiveVersion>2</archiveVersion>
       <data>
-        <version>8</version>
+        <version>9</version>
         <wantNonLocal>1</wantNonLocal>
         <debug>0</debug>
         <option>
@@ -1454,6 +1537,10 @@
           <name>AExtraOptionsV2</name>
           <state></state>
         </option>
+        <option>
+          <name>AsmNoLiteralPool</name>
+          <state>0</state>
+        </option>
       </data>
     </settings>
     <settings>
@@ -1465,7 +1552,7 @@
         <debug>0</debug>
         <option>
           <name>OOCOutputFormat</name>
-          <version>2</version>
+          <version>3</version>
           <state>0</state>
         </option>
         <option>
@@ -1492,6 +1579,7 @@
       <data>
         <extensions></extensions>
         <cmdline></cmdline>
+        <hasPrio>0</hasPrio>
       </data>
     </settings>
     <settings>
@@ -1511,7 +1599,7 @@
       <name>ILINK</name>
       <archiveVersion>0</archiveVersion>
       <data>
-        <version>14</version>
+        <version>16</version>
         <wantNonLocal>1</wantNonLocal>
         <debug>0</debug>
         <option>
@@ -1680,10 +1768,6 @@
           <state>1</state>
         </option>
         <option>
-          <name>CrcAlgo</name>
-          <state>1</state>
-        </option>
-        <option>
           <name>CrcPoly</name>
           <state>0x11021</state>
         </option>
@@ -1784,6 +1868,20 @@
         <option>
           <name>IlinkStackCallGraphFile</name>
           <state></state>
+        </option>
+        <option>
+          <name>CrcAlgorithm</name>
+          <version>0</version>
+          <state>1</state>
+        </option>
+        <option>
+          <name>CrcUnitSize</name>
+          <version>0</version>
+          <state>0</state>
+        </option>
+        <option>
+          <name>IlinkThreadsSlave</name>
+          <state>1</state>
         </option>
       </data>
     </settings>

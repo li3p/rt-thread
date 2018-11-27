@@ -2,8 +2,6 @@
   ******************************************************************************
   * @file    system_stm32f4xx.c
   * @author  MCD Application Team
-  * @version V2.6.0
-  * @date    04-November-2016
   * @brief   CMSIS Cortex-M4 Device Peripheral Access Layer System Source File.
   *
   *   This file provides two functions and one global variable to be called from 
@@ -24,7 +22,7 @@
   ******************************************************************************
   * @attention
   *
-  * <h2><center>&copy; COPYRIGHT 2016 STMicroelectronics</center></h2>
+  * <h2><center>&copy; COPYRIGHT 2017 STMicroelectronics</center></h2>
   *
   * Redistribution and use in source and binary forms, with or without modification,
   * are permitted provided that the following conditions are met:
@@ -108,7 +106,7 @@
 /*!< Uncomment the following line if you need to relocate your vector Table in
      Internal SRAM. */
 /* #define VECT_TAB_SRAM */
-#define VECT_TAB_OFFSET  0x00 /*!< Vector Table base offset field. 
+#define VECT_TAB_OFFSET  0x0000 /*!< Vector Table base offset field. 
                                    This value must be a multiple of 0x200. */
 /******************************************************************************/
 

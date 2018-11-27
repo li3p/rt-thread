@@ -282,7 +282,7 @@
 /* SOC_STM32F415RG is not set */
 /* SOC_STM32F415VG is not set */
 /* SOC_STM32F415ZG is not set */
-#define SOC_STM32F407VG
+/* SOC_STM32F407VG is not set */
 /* SOC_STM32F407VE is not set */
 /* SOC_STM32F407ZG is not set */
 /* SOC_STM32F407ZE is not set */
@@ -358,6 +358,7 @@
 /* SOC_STM32F446VE is not set */
 /* SOC_STM32F446ZC is not set */
 /* SOC_STM32F446ZE is not set */
+#define SOC_STM32F446ZE
 /* SOC_STM32F469AI is not set */
 /* SOC_STM32F469II is not set */
 /* SOC_STM32F469BI is not set */

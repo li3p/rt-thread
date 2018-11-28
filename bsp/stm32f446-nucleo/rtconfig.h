@@ -101,8 +101,8 @@
 #define RT_PIPE_BUFSZ 512
 #define RT_USING_SERIAL
 /* RT_USING_CAN is not set */
-/* RT_USING_HWTIMER is not set */
-/* RT_USING_CPUTIME is not set */
+#define RT_USING_HWTIMER
+#define RT_USING_CPUTIME
 /* RT_USING_I2C is not set */
 #define RT_USING_PIN
 /* RT_USING_ADC is not set */
@@ -247,7 +247,17 @@
 /* PKG_USING_STM32_SDIO is not set */
 /* PKG_USING_ICM20608 is not set */
 /* PKG_USING_U8G2 is not set */
-/* PKG_USING_BUTTON is not set */
+#define PKG_USING_BUTTON
+/* SINGLE_AND_DOUBLE_TRIGGER is not set */
+/* CONTINUOS_TRIGGER is not set */
+/* LONG_FREE_TRIGGER is not set */
+#define BUTTON_DEBOUNCE_TIME 2
+#define BUTTON_CONTINUOS_CYCLE 1
+#define BUTTON_LONG_CYCLE 10
+#define BUTTON_DOUBLE_TIME 15
+#define BUTTON_LONG_TIME 50
+#define PKG_USING_BUTTON_V100
+/* PKG_USING_BUTTON_LATEST_VERSION is not set */
 /* PKG_USING_MPU6XXX is not set */
 /* PKG_USING_PCF8574 is not set */
 
@@ -357,7 +367,6 @@
 /* SOC_STM32F446VC is not set */
 /* SOC_STM32F446VE is not set */
 /* SOC_STM32F446ZC is not set */
-/* SOC_STM32F446ZE is not set */
 #define SOC_STM32F446ZE
 /* SOC_STM32F469AI is not set */
 /* SOC_STM32F469II is not set */

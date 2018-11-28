@@ -11,10 +11,16 @@
 #include <board.h>
 
 #include <drivers/pin.h>
+#include <packages/button-v1.0.0/button.h>
 
 #define LED1 46 //PF9--21，在 drv_gpio.c 文件 pin_index pins[] 中查到 PF9 编号为 21
 #define LED3 75 //PF10--22，在 drv_gpio.c 文件 pin_index pins[] 中查到 PF10 编号为 22
 #define LED2 137 //PF10--22，在 drv_gpio.c 文件 pin_index pins[] 中查到 PF10 编号为 22
+
+
+Button_t button1;
+
+
 
 #define SLICE 25
  void led_thread_entry(void* parameter)
@@ -50,20 +56,59 @@
 
 #define KEY0    7   //PC13--2，在 drv_gpio.c 文件 pin_index pins[] 中查到 PE3 编号为 2
 #define KEY1    7   //PC13--2，在 drv_gpio.c 文件 pin_index pins[] 中查到 PE3 编号为 2
+
+uint8_t read_button_level(void)
+{
+  return rt_pin_read(KEY1);
+}
+
+void Btn2_Dowm_CallBack(void* args){
+
+    rt_kprintf("button driver, key0 down! \n");
+}
+
+void Btn2_Double_CallBack(void* args){
+    rt_kprintf("button driver, key0 double! \n");
+}
+
+
+void Btn2_Long_CallBack(void* args){
+    rt_kprintf("button driver, key0 long! \n");
+}
+
+void Btn2_Cont_CallBack(void* args){
+    rt_kprintf("button driver, key0 contiue! \n");
+}
+
+
 void key_thread_entry(void* parameter)
 {
     //PE2、PE3 设置上拉输入
-    rt_pin_mode(KEY1, PIN_MODE_INPUT);
+       rt_pin_mode(KEY1, PIN_MODE_INPUT);
 
+    Button_Create("button1", 
+        &button1,
+        read_button_level,
+        PIN_HIGH
+    );
+
+    Button_Attach(&button1,BUTTON_DOWM,Btn2_Dowm_CallBack);		//按键单击
+    Button_Attach(&button1,BUTTON_DOUBLE,Btn2_Double_CallBack);	//双击
+    Button_Attach(&button1,BUTTON_LONG,Btn2_Long_CallBack);		//长按
+    Button_Attach(&button1,BUTTON_CONTINUOS,Btn2_Cont_CallBack);		//长按
+				
     while (1)
     {
-        // 检测到低电平，即按键 1 按下了
-        if (rt_pin_read(KEY1) == PIN_HIGH)
-        {
-            rt_kprintf("key1 pressed!\n");
-        }
+        // // 检测到低电平，即按键 1 按下了
+        // if (rt_pin_read(KEY1) == PIN_HIGH)
+        // {
+        //     rt_kprintf("key1 pressed!\n");
+        // }
+
+        Button_Process();
+
         // 挂起 10ms
-        rt_thread_delay(rt_tick_from_millisecond(10));
+        rt_thread_delay(rt_tick_from_millisecond(25));
     }
 }
 
@@ -99,9 +144,9 @@ int main(void)
     if (tid != RT_NULL)
         rt_thread_startup(tid);
 
-  /* 创建 key 线程 */
-    tid = rt_thread_create("key",
-                    irq_thread_entry,
+          /* 创建 key 线程 */
+    tid = rt_thread_create("key2",
+                    key_thread_entry,
                     RT_NULL,
                     1024,
                     2,
@@ -109,6 +154,17 @@ int main(void)
     /* 创建成功则启动线程 */
     if (tid != RT_NULL)
         rt_thread_startup(tid);
+
+//   /* 创建 key 线程 */
+//     tid = rt_thread_create("key2",
+//                     irq_thread_entry,
+//                     RT_NULL,
+//                     1024,
+//                     2,
+//                     10);
+//     /* 创建成功则启动线程 */
+//     if (tid != RT_NULL)
+//         rt_thread_startup(tid);
 
     return 0;
 }
